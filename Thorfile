@@ -9,6 +9,6 @@ require 'berkshelf/thor'
 class Default < Thor
   desc "release", "Tag a new version and upload to chef-server"
   def release
-    puts "Releasing..."
+    invoke "version:bump", ["patch"]
   end
 end
